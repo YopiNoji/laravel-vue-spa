@@ -13,6 +13,7 @@
                 <th>Item</th>
                 <th>Price</th>
                 <th>Count</th>
+                <th>Comment</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -22,6 +23,7 @@
                     <td>{{ item.title }}</td>
                     <td>{{ item.price }}</td>
                     <td>{{ item.count }}</td>
+                    <td>{{ item.comment }}</td>
                     <td><router-link :to="{name: 'edit', params: { id: item.id }}" class="btn btn-primary">Edit</router-link></td>
                     <td><button class="btn btn-danger" @click.prevent="deleteItem(item.id)">Delete</button></td>
                 </tr>
