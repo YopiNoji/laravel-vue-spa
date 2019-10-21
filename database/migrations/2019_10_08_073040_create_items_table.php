@@ -19,7 +19,7 @@ class CreateItemsTable extends Migration
             $table->string('title');
             $table->text('comment')->nullable();
             $table->integer('price')->nullable();
-            $table->integer('count')->default(1);
+            $table->integer('count')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

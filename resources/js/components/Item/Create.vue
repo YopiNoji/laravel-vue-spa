@@ -17,7 +17,6 @@
                         <input type="number" class="form-control" v-model="item.count">
                     </div>
                 </div>
-                {{$store.state.auth.user}}
             </div>
             <div class="row">
                 <div class="col-md-6">
