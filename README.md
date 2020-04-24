@@ -63,3 +63,13 @@ composer install
 ## Access Laravel App
 
 http://localhost
+
+# Trouble Shooting
+
+## jwt-auth error
+
+```
+Argument 3 passed to Lcobucci\JWT\Signer\Hmac::doVerify() must be an instance of Lcobucci\JWT\Signer\Key, null given
+```
+
+Run `php artisan jwt:secret`.

@@ -15,7 +15,7 @@ export default {
 
     data: () => ({}),
     created() {
-        this.$store.dispatch("auth/setUserInfo");
+        this.$store.dispatch("Auth/setUserInfo");
     },
 
     methods: {},

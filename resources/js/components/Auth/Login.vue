@@ -98,7 +98,7 @@ export default {
                 },
                 success: function () {
                     app.success = true;
-                    this.$store.dispatch("auth/setUserInfo");
+                    this.$store.dispatch("Auth/setUserInfo");
                 },
                 error: function (res) {
                     app.has_error = true;

@@ -50,6 +50,7 @@ const actions = {
         try {
             await api.Item.delete(id);
             context.commit("deleteItem", id);
+            context.dispatch("getItems", this.state.Auth.id);
         } catch (e) {
             console.log(e);
         }

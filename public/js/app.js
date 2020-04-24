@@ -3116,7 +3116,7 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   created: function created() {
-    this.$store.dispatch("auth/setUserInfo");
+    this.$store.dispatch("Auth/setUserInfo");
   },
   methods: {}
 });
@@ -3231,7 +3231,7 @@ __webpack_require__.r(__webpack_exports__);
         },
         success: function success() {
           app.success = true;
-          this.$store.dispatch("auth/setUserInfo");
+          this.$store.dispatch("Auth/setUserInfo");
         },
         error: function error(res) {
           app.has_error = true;
@@ -59824,20 +59824,21 @@ var actions = {
 
             case 3:
               context.commit("deleteItem", id);
-              _context3.next = 9;
+              context.dispatch("getItems", this.state.Auth.id);
+              _context3.next = 10;
               break;
 
-            case 6:
-              _context3.prev = 6;
+            case 7:
+              _context3.prev = 7;
               _context3.t0 = _context3["catch"](0);
               console.log(_context3.t0);
 
-            case 9:
+            case 10:
             case "end":
               return _context3.stop();
           }
         }
-      }, _callee3, null, [[0, 6]]);
+      }, _callee3, this, [[0, 7]]);
     }));
 
     function _delete(_x5, _x6) {
@@ -59904,8 +59905,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/masakiyoshiiwa/Workspace/laravel-vue-spa/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/masakiyoshiiwa/Workspace/laravel-vue-spa/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
