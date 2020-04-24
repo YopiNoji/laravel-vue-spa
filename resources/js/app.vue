@@ -1,25 +1,23 @@
 <template>
-  <div>
-    <Header></Header>
-    <router-view></router-view>
-  </div>
+    <div>
+        <Header></Header>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-import Header from './components/Layout/Header'
+import Header from "./components/Layout/Header";
 
 export default {
     components: {
-      Header
+        Header,
     },
 
-    data: () => ({
-    }),
+    data: () => ({}),
     created() {
-      this.$store.dispatch('auth/setUserInfo')
+        this.$store.dispatch("auth/setUserInfo");
     },
 
-    methods: {
-    },
-}
+    methods: {},
+};
 </script>
