@@ -1,3 +1,5 @@
+import api from '../api/index';
+
 const state = {
     user: {
         id: Number,
@@ -17,12 +19,12 @@ const mutations = {
 const actions = {
     async logout(context) {
         context.commit("setUser", null);
-        const response = await axios.post("/logout");
+        const response = await api.Auth.logout();
     },
 
     async setUserInfo(context) {
         try {
-            const res = await axios.get("/api/auth/user");
+            const res = await api.Auth.setUserInfo();
             if (res.data.data) {
                 context.commit("setUser", {
                     id: res.data.data.id,
