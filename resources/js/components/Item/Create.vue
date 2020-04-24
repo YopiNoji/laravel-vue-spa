@@ -58,16 +58,13 @@ export default {
         };
     },
     created() {
-        this.user = this.$store.state.auth.user;
+        this.user = this.$store.state.Auth.user;
     },
     methods: {
         addItem() {
             this.item.user_id = this.user.id;
-            console.log(this.item);
-            const uri = "/api/item/create";
-            this.axios.post(uri, this.item).then((response) => {
-                this.$router.push({ name: "items" });
-            });
+            this.$store.dispatch('Item/create', this.item);
+            this.$router.push({ name: "items" });
         },
     },
 };

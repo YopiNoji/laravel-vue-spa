@@ -51,23 +51,21 @@
 export default {
     data() {
         return {
-            items: [],
             user: [],
         };
     },
     created() {
-        this.user = this.$store.state.auth.user;
-        const uri = `/api/item/get/${this.user.id}`;
-        this.axios.get(uri).then((response) => {
-            this.items = response.data.data;
-        });
+        this.user = this.$store.state.Auth.user;
+        this.$store.dispatch('Item/getItems', this.user.id);
+    },
+    computed: {
+        items() {
+            return this.$store.state.Item.items;
+        }
     },
     methods: {
         deleteItem(id) {
-            const uri = `/api/item/delete/${id}`;
-            this.axios.delete(uri).then((response) => {
-                this.items.splice(this.items.indexOf(id), 1);
-            });
+            this.$store.dispatch('Item/delete', id);
         },
     },
 };
