@@ -1,9 +1,3 @@
-# これは何？
-このアプリケーションは所持品を登録して管理するアプリケーションです。
-開発環境にはDockerを用いています。
-サーバサイドはLaravelで作られ、フロントエンドはVue.jsを用いたSPAで製作されています。
-ルーティングはvue-routerで行っています。認証にはJWTを用いており、フロントエンドでの認証情報の保持にVuexを用いています。
-
 # What is this ?
 This application is an application for registering and managing belongings.
 Docker is used for the development environment.
