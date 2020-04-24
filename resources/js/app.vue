@@ -12,12 +12,8 @@ export default {
     components: {
         Header,
     },
-
-    data: () => ({}),
     created() {
         this.$store.dispatch("Auth/setUserInfo");
     },
-
-    methods: {},
 };
 </script>

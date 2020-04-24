@@ -3465,11 +3465,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Component mounted.");
-  }
-});
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -3546,7 +3542,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     addItem: function addItem() {
       this.item.user_id = this.user.id;
-      this.$store.dispatch('Item/create', this.item);
+      this.$store.dispatch("Item/create", this.item);
       this.$router.push({
         name: "items"
       });
@@ -3712,7 +3708,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.user = this.$store.state.Auth.user;
-    this.$store.dispatch('Item/getItems', this.user.id);
+    this.$store.dispatch("Item/getItems", this.user.id);
   },
   computed: {
     items: function items() {
@@ -3721,7 +3717,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     deleteItem: function deleteItem(id) {
-      this.$store.dispatch('Item/delete', id);
+      this.$store.dispatch("Item/delete", id);
     }
   }
 });
@@ -59720,7 +59716,6 @@ var mutations = {
   },
   deleteItem: function deleteItem(state, id) {
     state.items = state.items.splice(state.items.indexOf(id), 1);
-    ;
   }
 };
 var actions = {
@@ -59824,21 +59819,20 @@ var actions = {
 
             case 3:
               context.commit("deleteItem", id);
-              context.dispatch("getItems", this.state.Auth.id);
-              _context3.next = 10;
+              _context3.next = 9;
               break;
 
-            case 7:
-              _context3.prev = 7;
+            case 6:
+              _context3.prev = 6;
               _context3.t0 = _context3["catch"](0);
               console.log(_context3.t0);
 
-            case 10:
+            case 9:
             case "end":
               return _context3.stop();
           }
         }
-      }, _callee3, this, [[0, 7]]);
+      }, _callee3, null, [[0, 6]]);
     }));
 
     function _delete(_x5, _x6) {

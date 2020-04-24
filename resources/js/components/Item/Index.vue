@@ -56,16 +56,16 @@ export default {
     },
     created() {
         this.user = this.$store.state.Auth.user;
-        this.$store.dispatch('Item/getItems', this.user.id);
+        this.$store.dispatch("Item/getItems", this.user.id);
     },
     computed: {
         items() {
             return this.$store.state.Item.items;
-        }
+        },
     },
     methods: {
         deleteItem(id) {
-            this.$store.dispatch('Item/delete', id);
+            this.$store.dispatch("Item/delete", id);
         },
     },
 };

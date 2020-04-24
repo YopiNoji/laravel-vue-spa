@@ -1,4 +1,4 @@
-import api from '../api/index';
+import api from "../api/index";
 
 const state = {
     items: [],
@@ -11,12 +11,11 @@ const mutations = {
         state.items = items;
     },
     deleteItem(state, id) {
-        state.items = state.items.splice(state.items.indexOf(id), 1);;
+        state.items = state.items.splice(state.items.indexOf(id), 1);
     },
 };
 
 const actions = {
-
     async create(context, data) {
         try {
             await api.Item.create(data);
@@ -50,7 +49,6 @@ const actions = {
         try {
             await api.Item.delete(id);
             context.commit("deleteItem", id);
-            context.dispatch("getItems", this.state.Auth.id);
         } catch (e) {
             console.log(e);
         }

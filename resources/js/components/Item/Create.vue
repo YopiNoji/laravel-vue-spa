@@ -63,7 +63,7 @@ export default {
     methods: {
         addItem() {
             this.item.user_id = this.user.id;
-            this.$store.dispatch('Item/create', this.item);
+            this.$store.dispatch("Item/create", this.item);
             this.$router.push({ name: "items" });
         },
     },
